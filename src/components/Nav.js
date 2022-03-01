@@ -14,7 +14,13 @@ const NavContainer = styled.nav`
   justify-content: center;
   justify-content: space-around;
   margin-right: 10px;
-  ${mobile({ display: "flex", flexDirection: "column", marginTop: "0px", marginRight: "0px" })}
+  margin-top: 15px;
+  ${mobile({
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "0px",
+    marginRight: "0px",
+  })}
 `;
 const NavItemsContainer = styled.div`
   display: flex;
@@ -22,50 +28,77 @@ const NavItemsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   ${mobile({ display: "flex", flexDirection: "column", marginTop: "0" })}
-  
 `;
 
 const IconContainer = styled.div`
   display: flex;
-  
-  
+  background: linear-gradient(
+    321deg,
+    rgba(167, 19, 44, 0.7903536414565826) 53%,
+    rgba(61, 19, 167, 0.7063200280112045) 85%
+  );
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+
+  ${mobile({
+    borderTopRightRadius: "40px", 
+    borderBottomRightRadius: "40px",
+    padding:"0px 10px",
+    background:
+      "linear-gradient(321deg, rgba(167, 19, 44, 0.55) 53%, rgba(61, 19, 167, 0.35) 80%)",
+  })}
 `;
 
 const Icon = styled.div`
   padding: 12px;
-  margin-left: 15px;
+  margin-left: 5em;
   border-radius: 10px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 50px;
-  ${mobile({ background: "none", marginLeft: "8px", marginTop: "0px", borderRadius: "20px" })}
+  ${mobile({
+    background: "none",
+    marginLeft: "8px",
+    marginTop: "0px",
+    borderRadius: "20px",
+  })}
   &:hover {
-    background:#dd16d17a;
+    background: #dd16d17a;
     cursor: pointer;
     color: black;
+    border-radius:10%;
   }
 `;
 
 const LogoImage = styled.img`
   width: 50%;
   ${mobile({ width: "60%" })}
-
 `;
 
 const IconHeading = styled.span`
   margin-top: 10px;
-  font-family: 'Bitter';
-  ${mobile({ color: "white" })}
-  color: white;;
+  font-family: 'Lobster', cursive;
+  ${mobile({ color: "white", fontWeight: "200" })}
+  color: white;
   font-weight: bold;
-
 `;
 const Heading = styled.div`
   display: flex;
-  margin:15px 15px 0px 15px;;
-  ${mobile({ alignItems: "center", justifyContent: "center", marginTop: "10px;" })}
+  margin: 15px 15px 0px 15px;
+  background: linear-gradient(321deg, rgba(167,19,44,0.7903536414565826) 10%, rgba(61,19,167,0.7063200280112045) 41%);
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding:10px;
+  align-items: center;
+  justify-content:center ;
+  ${mobile({
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: "10px",
+    background:"none"
+  })}
 `;
 const Title = styled.h1`
   white-space: nowrap;
@@ -90,7 +123,7 @@ const Nav = () => {
             <IconHeading>Projects</IconHeading>
           </Icon>
           <Icon>
-            <FaEthereum color="purple" size={"40px"} />
+            <FaEthereum color="grey" size={"40px"} />
             <IconHeading>Web3</IconHeading>
           </Icon>
           <Icon>

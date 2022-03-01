@@ -15,33 +15,44 @@ const HomeContainer = styled.div`
 const Top = styled.div`
   background: black;
   height: 20%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 10em;
   ${mobile({
     display: "flex",
     flexDirection: "row",
-    paddingBottom:"5em",
+    paddingBottom:"8em",
     marginBottom: "2em",
+    marginTop:"2em",
   })}
 `;
 const Left = styled.div`
   background: black;
-  width: 80%;
+  width: 150%;
   color: white;
+  padding-left:2em;
   ${mobile({
     display: "flex",
     flexDirection: "column",
     height: "100%",
     width: "100%",
-    marginTop: "10px",
+    marginTop: "5em",
     paddingBottom: "10em",
+    paddingLeft:"0px"
   })}
 `;
 const Right = styled.div`
   width: 120%;
+  padding-right:2em;
   ${mobile({
     display: "flex",
     height: "100%",
     width: "100%",
     marginTop: "0",
+    paddingRight:"0px",
+    justifyContent: "center"
   })}
 `;
 
@@ -50,6 +61,7 @@ const Sides = styled.div`
   flex-direction: row;
   height: 80%;
   justify-content: center;
+  padding: "3em";
   ${mobile({ display: "flex", flexDirection: "column", height: "80%" })}
 `;
 
@@ -62,11 +74,16 @@ const Main = styled.div`
 `;
 
 const TopTitle = styled.h1`
-  font-family: "Bitter";
+ font-family: 'Lobster', cursive;
   color: white;
   font-size: 50px;
-  ${mobile({ fontSize: "30px", color: "white", marginBottom: "0px" })}
+  display: flex;
+  justify-content: center;
+  ${mobile({ fontSize: "30px", color: "white", marginBottom: "0px", alignItems:"center" })}
 `;
+
+const TopImage = styled.img`
+width:60px;`
 
 const TechTitleContainer = styled.div`
   display: flex;
@@ -76,18 +93,20 @@ const TechTitleContainer = styled.div`
   border-top: 2px;
   border-top-color: antiquewhite;
   border-top-style: dotted;
+  margin-top: 10px;
   ${mobile({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "2em",
+    marginTop: "4em",
+    borderTopStyle: "none"
   })}
 `;
 const TitleSubheading = styled.h2`
   color: white;
   font-family: "Bitter";
   font-weight: 400;
-  ${mobile({ fontSize: "10px",fontWeight:"600",  whiteSpace: "nowrap" })}
+  ${mobile({ fontSize: "15px",fontWeight:"400",  whiteSpace: "wrap" })}
 `;
 const TopTextContainer = styled.div`
   margin: 20px;
@@ -96,7 +115,7 @@ const TopTextContainer = styled.div`
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: "1em",
+    marginBottom: "3em",
     flexWrap: "nowrap",
   })}
 `;
@@ -106,19 +125,28 @@ const InfoText = styled.p`
   font-family: "Bitter";
   font-size: 20px;
   padding: 5px;
+  line-height: 30px;
+  
   ${mobile({ background: "#1363a73d", fontSize: "16px", wordSpacing: "5px" })}
 `;
 const DownloadCV = styled.button`
-  padding: 10px;
-  font-family: "Bitter";
-  border-radius: 5px;
+  padding: 15px;
+  font-family: 'Lobster', cursive;
+  border-radius: 10px;
   background: yellow;
   cursor: pointer;
   font-weight: bolder;
+  margin-bottom: 10px;
+
+  &:hover{
+    background: black;
+    color: white;
+  }
 `;
 
 const ButtonLink = styled.a`
-text-decoration:none;`
+text-decoration:none;
+color: inherit;`
 
 const InfoContainer = styled.div`
   margin: 5px;
@@ -128,11 +156,24 @@ const InfoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #1363a73d;
+  background: linear-gradient(321deg, rgba(167,19,44,0.7903536414565826) 13%, rgba(61,19,167,0.7063200280112045) 55%);
+  border-radius:10px;
+  padding-left:8px;
+  padding-right:8px;
+  padding-top:15px;
   word-spacing: 1px;
   font-family: "Bitter";
   ${mobile({ marginBottom: "3em", marginTop: "3em", background: "none" })};
 `;
+
+const TopDesign = styled.div`
+background: linear-gradient(321deg, rgba(167,19,44,0.7903536414565826) 27%, rgba(61,19,167,0.7063200280112045) 50%);
+border-radius:20px;
+${mobile({
+    background:"black"
+  })}
+
+`
 
 const Home = () => {
   return (
@@ -140,13 +181,15 @@ const Home = () => {
       <Nav />
       <HomeContainer>
         <Top>
+          <TopDesign>
           <TopTextContainer>
-            <TopTitle>Hi, I'm Afzaan.</TopTitle>
+            <TopTitle>Hi, I'm Afzaan. <TopImage src="https://c.tenor.com/cWNgeHY3LTkAAAAi/cookierun-run.gif"/></TopTitle>
             <TitleSubheading>
               AWS Certified Cloud Practitioner | Full Stack Developer | WEB3
               Enthusiast
             </TitleSubheading>
           </TopTextContainer>
+          </TopDesign>
         </Top>{" "}
         <Sides>
           {" "}
@@ -158,16 +201,16 @@ const Home = () => {
                 University and 4 years of experience in Marketing, Account
                 Management roles at various start-ups and companies, I decided
                 to enroll in the intense Bootcamp at Lighthouse Labs and
-                graduated in August 2021. I am passionate about exploring new technologies to build tools that help make a difference!{" "}
+                graduated in August 2021. <br/>I am passionate about exploring new technologies to build tools that help make a difference!{" "}
               </InfoText>
               <DownloadCV><ButtonLink href="https://cloudflare-ipfs.com/ipfs/QmNNr2PTzpzG5LD65EJ6g8webMRdVJ5RFJBJWnhLVME7iq" target="_blank">Download CV</ButtonLink></DownloadCV>
             </InfoContainer>
             <TechTitleContainer>
               <h2>Tech Stack</h2>
-              <SkillsContainer> </SkillsContainer>
             </TechTitleContainer>
+              <SkillsContainer> </SkillsContainer>
           </Left>{" "}
-          <Right><Socials> </Socials></Right>
+          <Right><Socials/></Right>
         </Sides>
       </HomeContainer>
     </Main>

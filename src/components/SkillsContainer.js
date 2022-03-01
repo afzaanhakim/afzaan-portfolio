@@ -6,7 +6,7 @@ const Main = styled.div`
 display: flex;
 flex-direction:column;
 align-items: center;
-margin-top:30px;
+margin-top:10px;
 
 ${mobile({
     display: "flex",
