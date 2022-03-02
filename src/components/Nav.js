@@ -7,6 +7,7 @@ import { FaBolt, FaEthereum } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import ahlogo from "../assets/ahlogo.png";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router";
 
 const NavContainer = styled.nav`
   display: flex;
@@ -41,9 +42,9 @@ const IconContainer = styled.div`
   border-bottom-left-radius: 40px;
 
   ${mobile({
-    borderTopRightRadius: "40px", 
+    borderTopRightRadius: "40px",
     borderBottomRightRadius: "40px",
-    padding:"0px 10px",
+    padding: "0px 10px",
     background:
       "linear-gradient(321deg, rgba(167, 19, 44, 0.55) 53%, rgba(61, 19, 167, 0.35) 80%)",
   })}
@@ -68,7 +69,7 @@ const Icon = styled.div`
     background: #dd16d17a;
     cursor: pointer;
     color: black;
-    border-radius:10%;
+    border-radius: 10%;
   }
 `;
 
@@ -79,7 +80,7 @@ const LogoImage = styled.img`
 
 const IconHeading = styled.span`
   margin-top: 10px;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   ${mobile({ color: "white", fontWeight: "200" })}
   color: white;
   font-weight: bold;
@@ -87,17 +88,21 @@ const IconHeading = styled.span`
 const Heading = styled.div`
   display: flex;
   margin: 15px 15px 0px 15px;
-  background: linear-gradient(321deg, rgba(167,19,44,0.7903536414565826) 10%, rgba(61,19,167,0.7063200280112045) 41%);
+  background: linear-gradient(
+    321deg,
+    rgba(167, 19, 44, 0.7903536414565826) 10%,
+    rgba(61, 19, 167, 0.7063200280112045) 41%
+  );
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
-  padding:10px;
+  padding: 10px;
   align-items: center;
-  justify-content:center ;
+  justify-content: center;
   ${mobile({
     alignItems: "center",
     justifyContent: "center",
     marginTop: "10px",
-    background:"none"
+    background: "none",
   })}
 `;
 const Title = styled.h1`
@@ -107,6 +112,19 @@ const Title = styled.h1`
 `;
 
 const Nav = () => {
+  const history = useNavigate();
+
+  const onProjectsClick = () => {
+    return history("/projects");
+  };
+
+  const onHomeClick = () => {
+    return history("/")
+  }
+
+  const onWeb3Click = () => {
+    return history("/web3")
+  }
   return (
     <NavContainer>
       <Heading>
@@ -114,16 +132,16 @@ const Nav = () => {
       </Heading>
       <NavItemsContainer>
         <IconContainer>
-          <Icon>
+          <Icon onClick={onHomeClick}>
             <ImHome color={"green"} size={"40px"} />
             <IconHeading>Home</IconHeading>
           </Icon>
-          <Icon>
-            <FaBolt color="yellow" size={"40px"} />
+          <Icon onClick={onProjectsClick}>
+            <FaBolt color="yellow" size={"40px"}  />
             <IconHeading>Projects</IconHeading>
           </Icon>
-          <Icon>
-            <FaEthereum color="grey" size={"40px"} />
+          <Icon onClick={onWeb3Click}>
+            <FaEthereum color="grey" size={"40px"}  />
             <IconHeading>Web3</IconHeading>
           </Icon>
           <Icon>
