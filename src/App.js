@@ -4,9 +4,11 @@ import styled from "styled-components";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import ProjectItem from "./components/ProjectItem";
 import { mobile } from "./responsive";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Web3 from "./components/Web3";
+import ProjectList from "./components/ProjectList";
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -22,6 +24,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/web3" element={<Web3 />} />
+      {/* <Route path="/web3" element={<Web3 />} /> */}
     </Routes>
   );
 }

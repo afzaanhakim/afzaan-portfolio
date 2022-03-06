@@ -2,7 +2,7 @@ import React from "react";
 import { mobile } from "../responsive";
 import styled, { keyframes } from "styled-components";
 import Nav from "./Nav";
-import { SiPostgresql } from "react-icons/si";
+
 import SkillsContainer from "./SkillsContainer";
 import Socials from "./Socials";
 const HomeContainer = styled.div`
@@ -135,7 +135,7 @@ const InfoText = styled.p`
   font-size: 20px;
   line-height: 30px;
   text-overflow: initial;
-  ${mobile({ fontSize: "16px", wordSpacing: "5px", fontWeight: "bold" })}
+  ${mobile({ fontSize: "19px", wordSpacing: "2px", fontWeight: "light", fontFamily: 'mono' })}
 `;
 const DownloadCV = styled.button`
   padding: 15px;
