@@ -71,6 +71,10 @@ const Icon = styled.div`
     color: black;
     border-radius: 10%;
   }
+
+  &:active {
+background: white;
+  }
 `;
 
 const LogoImage = styled.img`
@@ -125,6 +129,7 @@ const Nav = () => {
   const onWeb3Click = () => {
     return history("/web3")
   }
+
   return (
     <NavContainer>
       <Heading>

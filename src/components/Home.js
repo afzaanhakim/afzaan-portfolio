@@ -1,6 +1,6 @@
 import React from "react";
 import { mobile } from "../responsive";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Nav from "./Nav";
 
 import SkillsContainer from "./SkillsContainer";

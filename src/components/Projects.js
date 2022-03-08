@@ -6,12 +6,13 @@ import ProjectList from "./ProjectList";
 
 const Main = styled.div`
 overflow:hidden;
+
 `;
 const Title = styled.h1`
   color: white;
   text-align: center;
-  font-family: "Lobster", cursive;
-  font-size: 45px;
+  font-weight: lighter;
+  font-size: 60px;
 `;
 
 const ProjectContainer = styled.div`
@@ -24,7 +25,9 @@ justify-content:center;
 border: red solid 2px;
 `
 
-const ProjectListContainer = styled.div``
+const ProjectListContainer = styled.div`
+${mobile({
+  })};`
 
 const Projects = () => {
   return (

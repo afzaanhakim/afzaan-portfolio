@@ -4,19 +4,19 @@ import { mobile } from "../responsive";
 
 import { FaGithub, FaGlobe } from "react-icons/fa";
 const Main = styled.div`
-  overflow: hidden;
+  /* overflow: hidden;
   background: white;
   display: flex;
   flex-direction: column;
   position: relative;
   justify-self: center;
   align-self: center;
-  margin: 1em ;
-
+  margin: 0em 1em 0em 1em;
   align-items: center;
   border-radius: 30px;
   color: white;
-  min-width: 80%;
+  min-height: 30vh;
+
   background: linear-gradient(
     321deg,
     rgba(19, 159, 167, 0.1) 23%,
@@ -26,17 +26,38 @@ const Main = styled.div`
 
   &:hover {
     color: white;
-    background:black;
+    background: black;
   }
 
   ${mobile({
     display: "flex",
     flexDirection: "column",
-    margin: "12.5%",
-    maxWidth: '80%',
-    justifySelf: 'self-end',
-    padding: "0 3px"
-  })}
+    margin: "1rem 0.6rem",
+    maxWidth: "85%",
+    justifySelf: "self-end",
+    padding: "2rem 1.8rem",
+  })} */
+  background: linear-gradient(
+    321deg,
+    rgba(19, 159, 167, 0.1) 23%,
+    rgba(23, 19, 167, 0.503536414565826) 63%,
+    rgba(167, 19, 156, 0.19) 79%
+  );
+  margin-right: 3em;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+  min-height: 30vh;
+  color: white;
+
+  ${mobile({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  })};
 `;
 
 const ProjectTitle = styled.h2`
@@ -44,29 +65,29 @@ const ProjectTitle = styled.h2`
   margin: 0 10px;
 
   ${mobile({
-   fontSize: "15px",
-   marginTop: "10px" })}
+    fontSize: "15px",
+    marginTop: "10px",
+  })}
 `;
 
 const ProjectImage = styled.img`
-  width: 360px;
-  height: 190px;
+  max-width: 360px;
   border-radius: 30px;
   border: double black 6px;
 
   ${mobile({
-   width: "256px",
-  height: "188px",
-  marginBottom: "10px" })}
+    width: "360px",
+    borderRadius: "90px",
+    margin: "0 90px",
+  })}
 `;
 
 const ImageContainer = styled.div`
   margin-top: 30px;
 
   ${mobile({
-   margin: "0.1em",
-   width: "256px",
-   height: "188px"  })}
+    marginRight: "7px",
+  })}
 `;
 
 const Left = styled.div`
@@ -80,11 +101,16 @@ const Left = styled.div`
   font-size: 12px;
 
   ${mobile({
-   fontSize: "10px"  })}
+    fontSize: "10px",
+  })}
 `;
 const Right = styled.div`
   margin-top: 10px;
-  background:linear-gradient(321deg, rgba(167, 19, 44, 0.55) 53%, rgba(61, 19, 167, 0.35) 80%) ;
+  background: linear-gradient(
+    321deg,
+    rgba(167, 19, 44, 0.55) 53%,
+    rgba(61, 19, 167, 0.35) 80%
+  );
   align-items: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -95,11 +121,17 @@ const Right = styled.div`
   justify-content: space-between;
   padding: 0 50px;
   color: white;
+  margin-bottom: 15px;
 
   &:hover {
     color: white;
-    background:linear-gradient(321deg, rgba(167, 19, 44, 0.55) 53%, rgba(61, 19, 167, 0.35) 80%)
+    background: linear-gradient(
+      321deg,
+      rgba(167, 19, 44, 0.55) 53%,
+      rgba(61, 19, 167, 0.35) 80%
+    );
   }
+  ${mobile({})}
 `;
 const Aside = styled.div``;
 
@@ -134,7 +166,7 @@ const StackLabel = styled.span`
 
   ${mobile({
     fontSize: "9px",
-    padding: "0 5px"
+    padding: "0 5px",
   })}
 `;
 const ProjectDescription = styled.div`
@@ -143,6 +175,7 @@ const ProjectDescription = styled.div`
 const ProjectDescText = styled.p`
   color: inherit;
   font-family: "Bitter";
+  min-height: 10vh;
 `;
 
 const TechStackUsed = styled.h3`
@@ -150,9 +183,9 @@ const TechStackUsed = styled.h3`
   color: white;
   flex-direction: row;
   font-size: 12px;
-  white-space: nowrap ;
+  white-space: nowrap;
   ${mobile({
-    fontSize: "9px"
+    fontSize: "9.5px",
   })}
 `;
 

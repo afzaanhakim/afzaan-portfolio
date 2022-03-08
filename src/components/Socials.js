@@ -24,11 +24,11 @@ const Main = styled.div`
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    background:
-      "linear-gradient(321deg, rgba(167, 19, 44, 0.7903536414565826) 53%, rgba(61, 19, 167, 0.7063200280112045) 85%)",
-    paddingTop: "20px",
-    paddingBottom: "20px",
+    background:"linear-gradient(321deg, rgba(167, 19, 44, 0.7903536414565826) 53%, rgba(61, 19, 167, 0.7063200280112045) 85%)",
+    paddingTop: "10px",
+    paddingBottom: "10px",
     paddingRight: "0px",
+    borderRadius: "40px",
   })}
 `;
 const C1 = styled.div`
@@ -160,19 +160,6 @@ const SocialText = styled.span`
 const SocialLink = styled.a`
   text-decoration: none;
 `;
-const MobileTitle = styled.h1`
-  display: none;
-  ${mobile({
-    color: "white",
-    fontSize: "20px",
-    fontWeight: "400",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    fontFamily: 'cursive'
-  })}
-`;
 
 const Socials = () => {
   return (
@@ -203,7 +190,7 @@ const Socials = () => {
           </C2>{" "}
         </SocialLink>
         <Title>Connect With Me</Title>{" "}
-        <SocialLink  href="mailto:afzaanhakim19@gmail.com" target="_blank">
+        <SocialLink href="mailto:afzaanhakim19@gmail.com" target="_blank">
           <C1
             background={
               "linear-gradient(321deg, rgba(167,19,44,0.7903536414565826) 10%, rgba(61,19,167,0.7063200280112045) 41%)"
@@ -232,7 +219,6 @@ const Socials = () => {
         </SocialLink>
       </BottomShelf>
       <MobileSocials>
-        <MobileTitle>Connect With Me</MobileTitle>
         <SocialContainer>
           <SocialLink
             href="https://www.linkedin.com/in/afzaanh/"
@@ -249,10 +235,7 @@ const Socials = () => {
           <SocialLink href="https://github.com/afzaanhakim" target="_blank">
             <MobileSocialImage src={github} />
           </SocialLink>
-          <SocialLink
-            href="mailto:afzaanhakim19@gmail.com"
-            target="_blank"
-          >
+          <SocialLink href="mailto:afzaanhakim19@gmail.com" target="_blank">
             <MobileSocialImage src={gmail} />
           </SocialLink>
         </SocialContainer>
