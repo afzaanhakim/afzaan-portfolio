@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import styled from "styled-components";
-import Web3list from "./Web3list";
+import Web3List from "./Web3List";
 import { mobile } from "../responsive";
 
 const Main = styled.div`
@@ -42,7 +42,7 @@ const Web3 = () => {
       <Nav />
       <Title>Web3 Stuff/NFTs</Title>
       <Web3Container>
-        <Web3list />
+        <Web3List />
       </Web3Container>
     </Main>
   );

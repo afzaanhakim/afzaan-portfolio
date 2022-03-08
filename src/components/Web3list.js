@@ -24,7 +24,7 @@ const Main = styled.div`
   })}
 `;
 
-const Web3list = () => {
+const Web3List = () => {
   const [nftData, setnftData] = useState([]);
   const [polygonData, setPolygonData] = useState([]);
 
@@ -88,4 +88,4 @@ const Web3list = () => {
   );
 };
 
-export default Web3list;
+export default Web3List;
